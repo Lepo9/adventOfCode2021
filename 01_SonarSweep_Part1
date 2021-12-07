@@ -1,0 +1,20 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+    ifstream in("input.txt");
+    if (!in)
+        return -1;
+    int a,b, c = 0;
+    in >> a;
+    while (in >> b) {
+        if (a < b)
+            c++;
+        a = b;
+    }
+    cout << c << endl;
+    
+    return 0;
+}
